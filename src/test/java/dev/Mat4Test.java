@@ -274,39 +274,6 @@ public class Mat4Test {
     }
 
     @Test
-    public void test_mulPerspective_a() {
-        System.out.println("mulPerspective_a");
-        float fovy = (float) Math.PI * 0.25f;
-        float aspect = 4f / 3f;
-        float zNear = 0.1f;
-        float zFar = 100.0f;
-        Mat4 result = new Mat4(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
-        Mat4 expResult = new Mat4(0f, 1.81066012f, 3.62132025f, 5.43198013f,
-                9.65685368f, 12.0710669f, 14.4852810f, 16.8994942f,
-                -20.0160160f, -22.0180168f, -24.0200195f, -26.0220222f,
-                -1.60160160f, -1.80180180f, -2.00200200f, -2.20220232f);
-//        result.mulPerspective(fovy, aspect, zNear, zFar);
-        assertTrue(result.equals(expResult));
-    }
-
-    @Test
-    public void test_mulPerspective_b() {
-        System.out.println("mulPerspective_b");
-        float fovy = (float) Math.PI * 0.25f;
-        float aspect = 4f / 3f;
-        float zNear = 0.1f;
-        float zFar = 100.0f;
-        Mat4 result = new Mat4();
-        Mat4 instance = new Mat4(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
-        Mat4 expResult = new Mat4(0f, 1.81066012f, 3.62132025f, 5.43198013f,
-                9.65685368f, 12.0710669f, 14.4852810f, 16.8994942f,
-                -20.0160160f, -22.0180168f, -24.0200195f, -26.0220222f,
-                -1.60160160f, -1.80180180f, -2.00200200f, -2.20220232f);
-//        instance.mulPerspective(fovy, aspect, zNear, zFar, result);
-        assertTrue(result.equals(expResult));
-    }
-
-    @Test
     public void test_toFA_a() {
         System.out.println("toFA");
         float[] expResult = new float[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
