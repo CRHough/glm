@@ -16,7 +16,7 @@
         <name>Java Graphics Society</name>
         <url>https://github.com/java-graphics</url>
     </organization>
-    
+
     <developers>
         <developer>
             <id>elect86</id>
@@ -79,13 +79,6 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
-        </dependency>
-
-        <!--  dependencies -->
-        <dependency>
-            <groupId>io.github.java-graphics</groupId>
-            <artifactId>openvr</artifactId>
-            <version>1.0</version>
         </dependency>
     </dependencies>
 

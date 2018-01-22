@@ -12,8 +12,6 @@ import glm.vec._3.Vec3;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
-import vr.HmdMatrix34_t;
-import vr.HmdMatrix44_t;
 
 /**
  *
@@ -37,7 +35,7 @@ public class Mat3 extends matrixQuery {
                 v.x, 0, 0,
                 0, v.y, 0,
                 0, 0, v.z);
-    }   
+    }
 
     public Mat3(Mat3 mat) {
         this(
@@ -201,8 +199,8 @@ public class Mat3 extends matrixQuery {
     public Vec3 mul_(Vec3 v) {
         return mul(v, v);
     }
-    
-    
+
+
     public Vec3 mul(Vec3 right, Vec3 res) {
         res.set(m00 * right.x + m10 * right.y + m20 * right.z,
                 m01 * right.x + m11 * right.y + m21 * right.z,
@@ -293,14 +291,14 @@ public class Mat3 extends matrixQuery {
 //        }
         return !Float.isNaN(expected) && !Float.isNaN(actual) && difference <= maxUlps;
     }
-    
+
     public Mat4 toMat4_() {
         return toMat4(new Mat4());
     }
 
     public Mat4 toMat4(Mat4 res) {
         return res.set(
-                m00, m01, m02, 0, 
+                m00, m01, m02, 0,
                 m10, m11, m12, 0,
                 m20, m21, m22, 0,
                 0, 0, 0, 1);

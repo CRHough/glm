@@ -5,7 +5,7 @@
 package jglm;
 
 /**
- * @deprecated 
+ * @deprecated
  * @author gbarbieri
  */
 public class Jglm {
