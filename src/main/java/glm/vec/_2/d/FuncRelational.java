@@ -12,7 +12,7 @@ import glm.vec._2.bool.Vec2bool;
  *
  * @author GBarbieri
  */
-abstract class FuncRelational extends BooleanOperators {
+abstract class FuncRelational extends FuncGeometric {
 
     public boolean any() {
         return Glm.any((Vec2d) this);

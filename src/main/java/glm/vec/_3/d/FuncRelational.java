@@ -12,7 +12,7 @@ import glm.vec._3.bool.Vec3bool;
  *
  * @author GBarbieri
  */
-abstract class FuncRelational extends ArithmeticOperators {
+abstract class FuncRelational extends FuncGeometric {
 
     public boolean any() {
         return Glm.any((Vec3d) this);
