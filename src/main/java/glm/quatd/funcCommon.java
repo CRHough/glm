@@ -82,9 +82,9 @@ abstract class funcCommon {
         double n9 = q.w * n0;
         double n10 = q.w * n1;
         double n11 = q.w * n2;
-        res.set((1.0f - (n4 + n5)) * v.x + (n6 - n11) * v.y + (n7 + n10) * v.z,
-                (n6 + n11) * v.x + (1.0f - (n3 + n5)) * v.y + (n8 - n9) * v.z,
-                (n7 - n10) * v.x + (n8 + n9) * v.y + (1.0f - (n3 + n4)) * v.z);
+        res.set((1.0 - (n4 + n5)) * v.x + (n6 - n11) * v.y + (n7 + n10) * v.z,
+                (n6 + n11) * v.x + (1.0 - (n3 + n5)) * v.y + (n8 - n9) * v.z,
+                (n7 - n10) * v.x + (n8 + n9) * v.y + (1.0 - (n3 + n4)) * v.z);
         return res;
     }
 

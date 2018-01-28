@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>me.snart.java-graphics</groupId>
     <artifactId>glm</artifactId>
-    <version>ag.1.0.0</version>
+    <version>ag.1.0.1</version>
     <packaging>jar</packaging>
 
     <name>GLM</name>

@@ -61,6 +61,14 @@ public class Quat extends funcGeometric {
         return this;
     }
 
+    public Quat identity () {
+      this.w = 1;
+      this.x = 0;
+      this.y = 0;
+      this.z = 0;
+      return this;
+    }
+
     public Quat conjugate_() {
         return conjugate(new Quat());
     }
@@ -76,7 +84,7 @@ public class Quat extends funcGeometric {
     public static Quat cast_(Mat4 m) {
         return cast(m, new Quat());
     }
-    
+
     public static Quat cast(Mat4 m, Quat res) {
 
         float fourXSquaredMinus1 = m.m00 - m.m11 - m.m22;

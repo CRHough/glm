@@ -14,11 +14,11 @@ import glm.vec._3.d.Vec3d;
  */
 public class Quatd extends funcGeometric {
     public Quatd() {
-        this(0.0f, 0.0f, 0.0f);
+        this(0, 0, 0);
     }
 
     public Quatd(double x, double y, double z) {
-        this(1.0f, x, y, z);
+        this(1, x, y, z);
     }
 
     public Quatd(Quatd q) {
@@ -37,11 +37,11 @@ public class Quatd extends funcGeometric {
     }
 
     public Quatd set() {
-        return set(0.0f, 0.0f, 0.0f);
+        return set(0, 0, 0);
     }
 
     public Quatd set(double x, double y, double z) {
-        return set(1.0f, x, y, z);
+        return set(1, x, y, z);
     }
 
     public Quatd set(Quatd q) {
@@ -58,6 +58,14 @@ public class Quatd extends funcGeometric {
         this.y = y;
         this.z = z;
         return this;
+    }
+
+    public Quatd identity () {
+      this.w = 1;
+      this.x = 0;
+      this.y = 0;
+      this.z = 0;
+      return this;
     }
 
     public Quatd conjugate_() {
@@ -97,8 +105,8 @@ public class Quatd extends funcGeometric {
             biggestIndex = 3;
         }
 
-        double biggestVal = (Math.sqrt(fourBiggestSquaredMinus1 + 1) * 0.5f);
-        double mult = 0.25f / biggestVal;
+        double biggestVal = (Math.sqrt(fourBiggestSquaredMinus1 + 1) * 0.5);
+        double mult = 0.25 / biggestVal;
 
         switch (biggestIndex) {
             case 0:
@@ -138,22 +146,22 @@ public class Quatd extends funcGeometric {
         double q00 = dx * x, q11 = dy * y, q22 = dz * z;
         double q01 = dx * y, q02 = dx * z, q03 = dx * w;
         double q12 = dy * z, q13 = dy * w, q23 = dz * w;
-        res.m00 = 1.0f - q11 - q22;
+        res.m00 = 1.0 - q11 - q22;
         res.m01 = q01 + q23;
         res.m02 = q02 - q13;
-        res.m03 = 0.0f;
+        res.m03 = 0.0;
         res.m10 = q01 - q23;
-        res.m11 = 1.0f - q22 - q00;
+        res.m11 = 1.0 - q22 - q00;
         res.m12 = q12 + q03;
-        res.m13 = 0.0f;
+        res.m13 = 0.0;
         res.m20 = q02 + q13;
         res.m21 = q12 - q03;
-        res.m22 = 1.0f - q11 - q00;
-        res.m23 = 0.0f;
-        res.m30 = 0.0f;
-        res.m31 = 0.0f;
-        res.m32 = 0.0f;
-        res.m33 = 1.0f;
+        res.m22 = 1.0 - q11 - q00;
+        res.m23 = 0.0;
+        res.m30 = 0.0;
+        res.m31 = 0.0;
+        res.m32 = 0.0;
+        res.m33 = 1.0;
         return res;
     }
 }
